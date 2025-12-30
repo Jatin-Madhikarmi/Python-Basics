@@ -1,6 +1,6 @@
 import numpy as np
-print(type(len))
 print(type(np.array))
+print(type(len))
 
 def hello(a):
     return(f"Hello {a}!")
@@ -100,3 +100,29 @@ def func():
 
 func()
 print(f"The value of n w.r.to global scope is {n}")
+
+# Implementation of nested functions
+def distance_xyz(x,y,z):
+    def distance_xy(x,y):
+        return np.sqrt((x-y)**2+(y-x)**2) # Random ass formula 
+
+    result_xy=distance_xy(x,y)
+    return distance_xy(result_xy,z)
+
+x,y,z=5,6,7
+distanceResult=distance_xyz(x,y,z)
+print(distanceResult)
+
+
+
+def exponentialFull(a,b):
+    def exponentialHalf(a,b):
+        return a**b
+    result=exponentialHalf(a,b/2)
+    result=exponentialHalf(a,4*b)
+    return result
+
+a,b=2,2
+result=exponentialFull(a,b)
+print(f"The exponential of 2 w.r.to 2 is {result}")
+
