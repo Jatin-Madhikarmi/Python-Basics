@@ -80,4 +80,23 @@ for i in list4:
     print(i)
 
 
+# Implementation of local and global varible
+variable=10
+print(f"The value of the varible globally is {variable}")
 
+def function():
+    variable=11
+    print(f"The value of the variable inside the local function is {variable}")
+
+function()
+
+n=67
+
+def func():
+    global n
+    print(f"The value of n globally inside the func() is {n}")
+    n=69
+    print(f"The value of n globally inside the func() which is now changed {n}")
+
+func()
+print(f"The value of n w.r.to global scope is {n}")
