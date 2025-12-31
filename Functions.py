@@ -126,3 +126,5 @@ a,b=2,2
 result=exponentialFull(a,b)
 print(f"The exponential of 2 w.r.to 2 is {result}")
 
+# ans=exponentialHalf(a,b) # here the exponentialHalf function is defined inside the exponentialFull function so we can't access it
+
