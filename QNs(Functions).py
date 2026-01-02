@@ -71,3 +71,78 @@ print(m)
 list1=splitMatrix(m)
 print(list1[0])
 print(list1[1])
+
+def my_cylinder(r,h):
+    s=2*np.pi*r**2 + 2*np.pi*r*h
+    h=np.pi*r**2*h
+    return list[s,h]
+
+
+r,h=1,5
+print(my_cylinder(r,h))
+
+
+def my_n_odds(n):
+    counter=0
+    i=0
+    for i in (n):
+        if(i%2 != 0):
+            counter=counter+1
+
+    return counter
+
+arr=np.arange(0,100,1)
+print(arr)
+print(arr.shape[0])
+print(f"The number of odd numbers in the array is {my_n_odds(arr)}")
+
+
+def my_twos(m,n):
+    arr1=np.ones((m,n))
+    arr2=np.ones((m,n))
+    return arr1+arr2
+m,n=3,2
+print(my_twos(m,n))
+
+difference = lambda x,y:x-y
+
+print(difference(2,1))
+
+def add_strings(a,b):
+    return (a+b)
+
+str1=add_strings("Programming"," ")
+str2=add_strings("is"," fun")
+print(add_strings(str1,str2))
+
+def my_donut_area(n,m):
+    area=np.pi*(m**2 -n**2)
+    return area
+
+a=np.arange(1,4)
+b=np.arange(2,7,2)
+print(a)
+print(b)
+print(my_donut_area(a,b))
+
+def my_within_tolerance(A,a,tol):
+    diff=np.abs(A-a)
+    return diff[diff < tol].tolist()
+    
+
+A=np.array([0,1,2,3])
+a=1.5
+tol=0.75
+print(my_within_tolerance(A,a,tol))
+
+def bounding_array(A,top,bottom):
+    result1=[bottom < A]
+    result2=[A < top]
+    result3=[A <= bottom]
+    result4=[A >= top]
+    result=np.array(list(result1))
+    return result 
+
+A=np.arange(-5,6,1)
+top,bottom=-3,3
+print(bounding_array(A,top,bottom))
