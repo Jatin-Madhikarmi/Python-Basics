@@ -14,7 +14,7 @@ traingleArea=lambda b,h:(b*h)/2
 b,h=2,3
 print(f"The area of the traingle where breadth is {b} and height is {h} is {traingleArea(b,h)}")
 
-
+#My implementation
 def splitMatrix(m):
     print(f"The size dimension(shape) of the matrix is {m.shape}")
     print(type(m.shape))
@@ -52,6 +52,15 @@ def splitMatrix(m):
             m2=m[:,[sliceVar[i]]]
                 
     
+    return [m1,m2]
+
+#Google Gemini Implementation 
+def splitMatrix(m):
+    cols=m.shape[1] # get the no of columns in the matrix
+    mid=(cols+1)//2
+
+    m1=m[:,:mid]
+    m2=m[:,mid:]
     return [m1,m2]
 
 
