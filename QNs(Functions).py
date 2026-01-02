@@ -20,19 +20,44 @@ def splitMatrix(m):
     print(type(m.shape))
     list1=list(m.shape)
     print(list1[1]) # represents the column of the matrix to determine whether it is odd or even
-    if list1[1]/2 != 0:
-        sliceVar1=list1[1]-2
-        sliceVar2=2
+    print(type(list1[1]))
+    print(f"The value of the column is {list1[1]}")
+    slicer=list1[1]
+    if slicer%2 == 0:
+        print(f"The number is divisible by 2")
+        print("Entered the if  statement block")
+        sliceVar1=list1[1]//2 - 1  
+        sliceVar2=list1[1]//2 
+        sliceVar3=list1[1]-1
+        print(f"The value of sliceVar1 is {sliceVar1}")
+        print(type(sliceVar2))
+        print(f"The value of sliceVar2 is {sliceVar2}")
+        m1=m[:,[0,sliceVar1]]
+        m2=m[:,[sliceVar2,sliceVar3]]
     else:
-        sliceVar1=list1[1]/2    
-        sliceVar2=list1[1]/2   
-    m1=m[:,[0,sliceVar1]]
-    m2=m[:,[sliceVar2]]
+        print(f"The number is not divisible by 2")
+        print("Entered the else statement block")
+        sliceVar=[]
+        for i in range(list1[1]-1):
+            sliceVar.append(i)
+
+        for i in range(list1[1]//2 + 1 ):
+            print(f"First for loop {i}")
+            m1=m[:,[0,sliceVar[i]]]
+    
+
+        i=list1[1]//2 + 1
+        for i in range(list1[1]-1):
+            print(f"Second for loop {i}")
+            m2=m[:,[sliceVar[i]]]
+                
+    
     return [m1,m2]
 
 
 m=np.array([[1,2,3],[4,5,6],[7,8,9]])
 #m=np.array([[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]])
+m=np.array([[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20],[21,22,23,24,25]])
 print(m)
 list1=splitMatrix(m)
 print(list1[0])
