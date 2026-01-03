@@ -34,3 +34,8 @@ print(list_6.count("h"))
 
 list_0=[list_4[0]]
 print(list_0)
+
+nFactor=8
+list_7=[12]*nFactor # This is called list multiplication and when [] term is multiplied with any number(n) then the list is repeated n times
+                    #with the number inside [] 
+print(list_7)
