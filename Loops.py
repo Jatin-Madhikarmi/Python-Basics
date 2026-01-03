@@ -60,3 +60,43 @@ for i in range(n):
         s+=x[i,j]
 
 print(s)
+
+n,i=8,0
+
+while n>=1:
+    n/=2
+    i+=1
+print(i)
+
+x=range(5)
+y=[]
+
+for i in x:
+    y.append(i**2)
+
+print(y)
+
+y=[i**2 for i in x if i%2==0]
+print(y)
+
+y=[]
+for i in range(5):
+    for j in range(2):
+        y.append(i+j)
+    
+print(y)
+
+y=[i+j for i in range(5) for j in range(2)]
+print(y)
+
+x={"a":1,
+   "b":2,
+   "c":3}
+
+cubed={key:v**3 for (key,v) in x.items()}
+print(cubed)
+
+set1={1,2,3,4,5,6}
+set2=[i**2 for i in set1]
+print(type(set2))
+print(set2)
