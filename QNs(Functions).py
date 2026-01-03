@@ -136,13 +136,15 @@ tol=0.75
 print(my_within_tolerance(A,a,tol))
 
 def bounding_array(A,top,bottom):
-    result1=[bottom < A]
-    result2=[A < top]
-    result3=[A <= bottom]
-    result4=[A >= top]
-    result=np.array(list(result1))
-    return result 
+    A[A < bottom] = bottom
+    A[A > top] = top
+    return A
 
 A=np.arange(-5,6,1)
-top,bottom=-3,3
+top,bottom=3,-3
+print(A)
 print(bounding_array(A,top,bottom))
+
+greetings =lambda name,age : f"Hi my name is {name} and I am {age} years old"
+
+print(greetings("John",26))
