@@ -31,3 +31,7 @@ list_2=[]
 list_2.append(6)
 list_2.append(9)
 print(list_2)
+
+scaleFactor=3
+tuples_6=("Python",)*scaleFactor
+print(tuples_6)

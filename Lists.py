@@ -39,3 +39,6 @@ nFactor=8
 list_7=[12]*nFactor # This is called list multiplication and when [] term is multiplied with any number(n) then the list is repeated n times
                     #with the number inside [] 
 print(list_7)
+
+list_8=[0,*list_7,4] # Unpacking list operator is *
+print(list_8)

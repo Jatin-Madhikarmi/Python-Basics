@@ -42,3 +42,9 @@ dict_4=dict(list_2)
 print(dict_4[2])
 print(dict_4.keys())
 print(dict_4.values())
+
+dict_5=dict_1 | dict_2 # Merging operator is |
+print(dict_5)
+
+dict_6={**dict_5,"apple":"pen"} # Unpacking the dictionary operator is **dict_name
+print(dict_6)
