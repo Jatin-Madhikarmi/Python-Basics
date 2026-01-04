@@ -84,12 +84,19 @@ print(upperWords)
 
 
 def my_connectivity_mat_2_dict(C, names):
+    connections=[]
+    current_name=names[0]
+    node={}
     for i in range(C.shape[0]):
+        connections=[]
         for j in range(C.shape[1]):
             if C[i,j] == 1:
-                print("Hello world")
+                connections.append(j)
+                current_name=names[i]
+                node[current_name]=connections
+    return node
 
 C = np.array([[0, 1, 0, 1], [1, 0, 0, 1], [0, 0, 0, 1], [1, 1, 1, 0]])
 names = ['Los Angeles', 'New York', 'Miami', 'Dallas']
 
-my_connectivity_mat_2_dict(C,names)
+print(my_connectivity_mat_2_dict(C,names))
