@@ -32,3 +32,41 @@ def fibonacci_iterative(n):
     return fibs
 
 print(fibonacci_iterative(5))
+
+
+def hanaoiTowers(n,fromTower,toTower,altTower):
+
+    if n!=0:
+        hanaoiTowers(n-1,fromTower,altTower,toTower)
+
+        print(f"BLock {n} is moved from tower {fromTower}  to tower {toTower}")
+
+        hanaoiTowers(n-1,altTower,toTower,fromTower)
+
+print(hanaoiTowers(3,1,3,2))
+
+
+def my_QuickSort(lst):
+    if len(lst)  <= 1:
+        sortedList=lst
+    else:
+        pivot=lst[0]
+
+        bigger=[]
+        smaller=[]
+        same=[]
+
+        for i in lst:
+            if i > pivot:
+                bigger.append(i)
+            elif i < pivot:
+                smaller.append(i)
+            else:
+                same.append(i)
+    
+        sortedList=my_QuickSort(smaller) + same + my_QuickSort(bigger)
+    
+    return sortedList
+
+list1=[62,3,2,3421,23,1,21,441,5]
+print(my_QuickSort(list1))
