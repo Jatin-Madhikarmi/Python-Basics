@@ -1,3 +1,4 @@
+import numpy as np
 def my_sum_list(lst):
     counter=0
     for sum in lst:
@@ -26,3 +27,35 @@ x=[0,1,2,3,4,5]
 n=0
 print(my_chebyshev_poly1(n,x))
 
+
+def golden_ratio(n):
+    fibs=np.ones(n)
+
+    for i in range(2,n):
+        fibs[i]=fibs[i-1] + fibs[i-2]
+
+    return fibs[i].tolist(),fibs[i-1].tolist()
+
+n=10
+numerator,denominator=golden_ratio(n+1)
+print({numerator/denominator})
+
+def gcd(a,b):
+    if b == 0:
+        return a
+    
+    else:
+        return gcd(b,a%b)
+    
+a,b=10,4
+print(gcd(a,b))
+
+def pascalTriangle(n):
+    list1=np.ones(n)
+    if n==1 or n==2:
+        return list1
+    else:
+        return
+
+row=2
+print(pascalTriangle(row)) 
