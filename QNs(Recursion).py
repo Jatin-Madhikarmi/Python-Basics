@@ -50,12 +50,17 @@ def gcd(a,b):
 a,b=10,4
 print(gcd(a,b))
 
-def pascalTriangle(n):
-    list1=np.ones(n)
-    if n==1 or n==2:
-        return list1
-    else:
-        return
+def my_pascal_row(m):
+    n = m - 1
+    row = [1] 
+    
+    current_val = 1
+    for k in range(1, n + 1):
+        current_val = current_val * (n - k + 1) // k
+        row.append(current_val)
+        
+    return row
 
-row=2
-print(pascalTriangle(row)) 
+
+row=3
+print(my_pascal_row(row)) 
