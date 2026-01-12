@@ -64,3 +64,40 @@ def my_pascal_row(m):
 
 row=3
 print(my_pascal_row(row)) 
+
+
+
+def my_spiral_ones(n):
+    # Initialize an n x n matrix of zeros
+    matrix = np.zeros((n, n), dtype=int)
+    
+    top, bottom = 0, n - 1
+    left, right = 0, n - 1
+    
+    while top <= bottom and left <= right:
+        # 1. Move Right
+        for i in range(left, right + 1):
+            matrix[top][i] = 1
+        top += 1
+        
+        # 2. Move Down
+        for i in range(top, bottom + 1):
+            matrix[i][right] = 1
+        right -= 1
+        
+        # 3. Move Left (Check if top <= bottom still holds)
+        if top <= bottom:
+            for i in range(right, left - 1, -1):
+                matrix[bottom][i] = 1
+            bottom -= 1
+            
+        # 4. Move Up (Check if left <= right still holds)
+        if left <= right:
+            for i in range(bottom, top - 1, -1):
+                matrix[i][left] = 1
+            left += 1
+            
+    return matrix
+
+n=5
+print(my_spiral_ones(5))
