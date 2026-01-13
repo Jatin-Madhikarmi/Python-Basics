@@ -101,3 +101,22 @@ def my_spiral_ones(n):
 
 n=5
 print(my_spiral_ones(5))
+
+
+def my_ackermann(m, n):
+    """
+    Computes the Ackermann function A(m, n) using recursion.
+    """
+    if m == 0:
+        return n + 1
+    elif m > 0 and n == 0:
+        # Note: Your prompt specifies n=1 as the second case, 
+        # but the standard Ackermann usually defines A(m, 0) = A(m-1, 1).
+        # Following your prompt's logic:
+        return my_ackermann(m - 1, 1)
+    elif m > 0 and n > 0:
+        return my_ackermann(m - 1, my_ackermann(m, n - 1))
+
+
+n,m=1,1
+print(my_ackermann(n,m))
