@@ -1,3 +1,4 @@
+import numpy as np
 class Person():
     def __init__(self,name,age):
         self.name =name
@@ -40,3 +41,37 @@ Student2=Student("2","David","M")
 Student1.num_instances()
 Student2.num_instances()
 Student1.report(100)
+
+
+class Sensor():
+    def __init__(self,name,location,record_date):
+        self.name=name
+        self.location=location
+        self.record_date=record_date
+        self.data={}
+
+    def add_data(self,t,data):
+        self.data["time"]=t
+        self.data["data"]=data
+        print(f"We have {len(data)} points stored")
+    
+    def clear_data(self):
+        self.data={}
+        print(f"The Dictionary is cleared ")
+
+Sensor1=Sensor("DavidPutra","Jelloa Do","2025")
+data = np.random.randint(-10, 10, 10)
+print(data)
+Sensor1.add_data(np.arange(10),data)
+Sensor1.clear_data()
+
+
+class Accelerometer(Sensor):
+    def show_type(self):
+        print("I am an accelerometer.")
+
+Accelerometer1=Accelerometer("acc1","Okland","2026")
+Accelerometer1.show_type()
+data=np.random.randint(-10,10,5)
+Accelerometer1.add_data(np.arange(10),data)
+Accelerometer1.clear_data()
