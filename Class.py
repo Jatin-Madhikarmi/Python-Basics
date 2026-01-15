@@ -75,3 +75,20 @@ Accelerometer1.show_type()
 data=np.random.randint(-10,10,5)
 Accelerometer1.add_data(np.arange(10),data)
 Accelerometer1.clear_data()
+
+class UBCacc(Accelerometer):
+    def show_type(self):
+        print(f"I am and accelerometer with the type {self.name}")
+
+UBC1=UBCacc("UBC","Berkley","2026")
+UBC1.show_type()
+
+class NewSensor(Sensor):
+    def __init__(self, name, location, record_date,brand):
+        super().__init__(name,location,record_date)
+        self.brand=brand
+        
+
+NewSensor1=NewSensor("S1","Utah","2025-01-01","ABC")
+print(NewSensor1.brand)
+print(NewSensor1.name)
