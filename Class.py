@@ -92,3 +92,26 @@ class NewSensor(Sensor):
 NewSensor1=NewSensor("S1","Utah","2025-01-01","ABC")
 print(NewSensor1.brand)
 print(NewSensor1.name)
+
+class Employee():
+    def __init__(self,name,id,location):
+        self.name=name
+        self._id=id
+        self._location=location
+        self.__department="Management"
+
+    def get_department(self):
+        print(f"The department is {self.__department}")
+
+    def __set_department(self,department):
+        self.__department=department
+
+E1=Employee("John","001","Bamel")
+E1.get_department()
+E1.set_department("CEO")
+E1.get_department()
+print(E1.name)
+print(E1._id)
+print(E1.__department)
+        
+    
