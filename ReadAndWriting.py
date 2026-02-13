@@ -46,3 +46,25 @@ infilne=open('./testPickle.pkl','rb')
 our_dict=pickle.load(infilne,encoding="latin1")
 print(our_dict)
 infilne.close()
+
+#JSON Files
+import json
+Uni={
+    "Name":"Kathmandu University",
+    "Location":{
+        "Country":"Nepal",
+        "District":"Kavre"
+    },
+    "Status":"Open",
+    "list1":[
+        "Student 1,"
+        "Student 2,"
+        "Student 3,"
+    ]
+}
+
+json.dump(Uni,open('School.json','w'))
+
+jsonFile=json.load(open('./School.json','r'))
+print(jsonFile)
+print(type(jsonFile))
