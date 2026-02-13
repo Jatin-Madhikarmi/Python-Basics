@@ -31,3 +31,18 @@ contents=file.read()
 file.close()
 print(contents)
 
+#Pickle Files
+import pickle 
+dict1={'A':0,
+       'B':1,
+       'C':'2'}
+
+pickle.dump(dict1,open('testPickle.pkl','wb'))
+
+my_dict=pickle.load(open('./testPickle.pkl','rb'))
+print(my_dict)
+
+infilne=open('./testPickle.pkl','rb')
+our_dict=pickle.load(infilne,encoding="latin1")
+print(our_dict)
+infilne.close()
