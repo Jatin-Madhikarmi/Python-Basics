@@ -22,3 +22,12 @@ file.close()
 print(reterived_array)
 
 print(np.loadtxt('./my_array.txt'))
+
+data = np.random.random((100,5))
+np.savetxt('test.csv',data,delimiter=',',fmt='%.2f',header='c1, c2, c3, c4, c5')
+
+file=open('./test.csv','r')
+contents=file.read()
+file.close()
+print(contents)
+
