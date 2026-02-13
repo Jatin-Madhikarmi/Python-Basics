@@ -48,3 +48,10 @@ print(dict_5)
 
 dict_6={**dict_5,"apple":"pen"} # Unpacking the dictionary operator is **dict_name
 print(dict_6)
+
+
+print("New disctionaries")
+dict7={"key":"Kathamndu"}
+value="Bhaktapur"
+dict7["key"]=value
+print(dict7)
