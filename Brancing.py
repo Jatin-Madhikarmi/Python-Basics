@@ -80,3 +80,9 @@ print(person)
 
 man="Student" if isStudent else "Not Student"
 print(man)
+
+decider=None
+if decider:
+    print("Enterd the if statement ")
+else :
+    print("Entered the else statement")
