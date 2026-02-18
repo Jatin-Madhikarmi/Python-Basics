@@ -42,3 +42,7 @@ print(list_7)
 
 list_8=[0,*list_7,4] # Unpacking list operator is *
 print(list_8)
+
+list_9=[3]
+print("The value of the list_9 after slicing is :\n")
+print(list_9[:-1])
