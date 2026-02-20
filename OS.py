@@ -28,3 +28,7 @@ if os.path.exists(brandnewpath):
     print(f"Yes the brandnewpath exists")
 else:
     print("No the brandnewpath doesn't exists")
+
+
+print(os.path.realpath("Downloads"))
+print(os.path.abspath("Downloads"))

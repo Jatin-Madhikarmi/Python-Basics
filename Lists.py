@@ -46,3 +46,13 @@ print(list_8)
 list_9=[3]
 print("The value of the list_9 after slicing is :\n")
 print(list_9[:-1])
+
+
+memory=[1,2,3]
+least_used=1
+least_used_index=memory.index(least_used)
+new_element=0
+print(f"The least used element is {least_used} and it's index is {least_used_index}")
+memory[least_used_index]=new_element
+print(f"After rep the memory becomes {memory}")
+print(memory)
