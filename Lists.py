@@ -56,3 +56,20 @@ print(f"The least used element is {least_used} and it's index is {least_used_ind
 memory[least_used_index]=new_element
 print(f"After rep the memory becomes {memory}")
 print(memory)
+
+page_reference_string=[1,2,3,1,5,6,7,8,9]
+index=5
+visited=[]
+for i in page_reference_string[0:index]:
+    visited.append(i)
+    print(i)
+print(visited)
+
+visited=[]
+memory=[1,2,3]
+for i in page_reference_string[0:index]:
+    if i in memory:
+        if i not in visited:
+            visited.append(i)
+
+print(visited)
