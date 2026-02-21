@@ -55,3 +55,6 @@ dict7={"key":"Kathamndu"}
 value="Bhaktapur"
 dict7["key"]=value
 print(dict7)
+
+dict7.pop("key")
+print(dict7)

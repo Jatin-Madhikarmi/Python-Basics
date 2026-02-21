@@ -73,3 +73,14 @@ for i in page_reference_string[0:index]:
             visited.append(i)
 
 print(visited)
+
+string=[1,2,2,3,4,3,2,1,2,4,6]
+memory=[4,2,1]
+index=5
+visited=[]
+print("HERE WE GO")
+for i in string[index:]:
+    if i in memory:
+        if i not in visited:
+            visited.append(i)
+print(visited)
