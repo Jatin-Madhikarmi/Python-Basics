@@ -51,3 +51,39 @@ print(g)
 g[g>3]=3
 print(g)
 print(f.T)
+
+print("Using the indentity")
+array=np.identity(4)
+print(array)
+
+arr=np.array([1,2,3])
+list1=[1,2,1]
+diff=[]
+diff=arr-list1
+print(diff)
+print(type(diff))
+
+two_2d_arr=np.array([[1,2],[3,4]])
+print(two_2d_arr)
+print(two_2d_arr[0])
+print(two_2d_arr[1])
+print(type(two_2d_arr[0]))
+
+list2=[4,3]
+arr=np.array([1,2])
+for i in range(2):
+    if arr.all() >= two_2d_arr[i].all():
+        print("Yes the list is bigger")
+    else:
+        print("No the list is not bigger")
+
+n=4
+myarr=np.zeros(n)
+myarr=np.zeros(2*n)
+for i in range(2*n):
+    status='Total Resource Instance' if i < n else 'Available Matrix'
+    myarr[i]=input(f"{status}{[i]} : ")
+
+print(myarr)
+print(myarr[:n])
+print(myarr[n:])
