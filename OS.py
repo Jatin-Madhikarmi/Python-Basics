@@ -32,3 +32,18 @@ else:
 
 print(os.path.realpath("Downloads"))
 print(os.path.abspath("Downloads"))
+
+path="C:/Users/jatin/Downloads"
+if os.listdir(path):
+    print(f"The path already exists {path}")
+
+else:
+    print(f"The path doesn't exists {path}")
+
+# for files in os.listdir(path):
+#     print(files)
+
+child=path
+parent=os.path.realpath(os.path.join(child,'..'))
+print(f"The child path is {child}")
+print(f"The parent to the above child path is {parent}")
