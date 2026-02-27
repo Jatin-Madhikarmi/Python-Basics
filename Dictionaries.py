@@ -58,3 +58,15 @@ print(dict7)
 
 dict7.pop("key")
 print(dict7)
+
+new_dict=dict()
+key="Nepal"
+#new_dict["Nepal"]=["Bhaktapur","Dharan"]
+if key in new_dict:
+    if (type(new_dict[key])) == list:
+        new_dict[key].append("Kathmandu")
+    else:
+        new_dict[key]=[new_dict[key],"Lalitpur"]
+else:
+    new_dict[key]="Birtanagar"
+print(new_dict)

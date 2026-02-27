@@ -87,3 +87,31 @@ for i in range(2*n):
 print(myarr)
 print(myarr[:n])
 print(myarr[n:])
+
+arr1=np.array([1,2,3])
+arr2=np.array([1,2,4])
+
+if (arr1 == arr2).all():
+    print("Both the arrays are equal.\n")
+else:
+    print("Both the array's are not equal.\n")
+
+twod_arr=np.array([[1,2],[3,4]])
+list3=[1,2]
+else_count=0
+visited=[]
+my_arr=np.array(list3)
+print(my_arr.all())
+while (else_count != 2 or len(visited) != 2):
+    for i in range(2):
+        if ((my_arr == two_2d_arr[i]).all() and i not in visited):
+            else_count=0
+            print("Enetred the if condition")
+            print(visited)
+            visited.append(i)
+        else:
+            print("Entered the else condition")
+            print(f"The current value of else count is {else_count}")
+            else_count+=1
+
+print(visited)
