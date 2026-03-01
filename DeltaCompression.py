@@ -1,3 +1,4 @@
+import argparse
 uncompressed_list=[2,3,4,5,2,1,3,5,7]
 
 def delta_compression(uncompressed_list):
@@ -20,9 +21,25 @@ def delta_decompresseion(compressed_list):
 
     return uncompressed_list
 
-print(f"The uncompressed list is {uncompressed_list}")
-compressed_list=delta_compression(uncompressed_list)
-print(f"The compressed list is {compressed_list}")
-new_uncompressed_list=delta_decompresseion(compressed_list)
-print(f"The new uncompressed list is {new_uncompressed_list}")
+def get_parser():
+    argparser=argparse.ArgumentParser(description="Command Line Utility to demonstrate the delta compression")
+    argparser.add_argument("list",
+                           nargs='+',
+                           help="Add the list to be compressed")
+    
+    return argparser
+
+def main(argv=None):
+    parser=get_parser()
+    args=parser.parse_args(argv)
+    uncompressed_list=[int(x) for x in args.list]
+    print(f"The uncompressed list is {uncompressed_list}")
+    compressed_list=delta_compression(uncompressed_list)
+    print(f"The compressed list is {compressed_list}")
+    # new_uncompressed_list=delta_decompresseion(compressed_list)
+    # print(f"The new uncompressed list is {new_uncompressed_list}")
+
+if __name__=="__main__":
+    main()
+
 
