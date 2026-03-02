@@ -70,3 +70,44 @@ if key in new_dict:
 else:
     new_dict[key]="Birtanagar"
 print(new_dict)
+
+new_dict=dict()
+for i in range(5):
+    new_dict[i]=i+1
+
+print(new_dict)
+new_dict.pop(0)
+print(new_dict)
+
+new_dict.clear()
+for i in range(5):
+    if len(new_dict.keys()) !=3:
+        new_dict[i]=i+1
+    else:
+        pass
+print(new_dict)
+
+list1=[1]
+new_dict.pop(list1[-1])
+print(new_dict)
+
+page=1
+least_dict=dict()
+for i in new_dict.keys():
+    # Find the key with the least value
+    if len(least_dict.keys()) == 0:
+        least_dict[i]=new_dict[i]
+        old_data=least_dict[i]
+    else:
+        new_data=new_dict[i]
+        if new_data < old_data:
+            print(f"The new data {new_data} is smaller than old data {old_data}")
+        else:
+            print(f"The new data {new_data} is  NOT smaller than old data {old_data}")
+
+    pass
+
+print(least_dict)
+
+
+
