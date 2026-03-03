@@ -84,3 +84,21 @@ for i in string[index:]:
         if i not in visited:
             visited.append(i)
 print(visited)
+
+
+new_list=1
+for i in range(5):
+    new_list=i
+    if(type(new_list))!= list:
+        new_list=[new_list]
+print(f"The new list is {new_list}")
+
+new_list=["This is a list"]
+for listing in new_list:
+    print(listing)
+
+with open('./hello.txt','r') as fd:
+    data=fd.read()
+    raw=data
+    print(data)
+    print(raw.replace('jatin',' '))
