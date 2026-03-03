@@ -19,3 +19,12 @@ if file_path.suffix.lower() == '.txt':
     print("Yes, the correct format is provided")
 else:
     print("No, the incoreect format is provided")
+
+path=Path('/documents/files/report.txt')
+
+print(path)
+print(path.stem)
+print(path.suffix)
+print(path.name)
+print(path.parent)
+print(path.is_dir())
