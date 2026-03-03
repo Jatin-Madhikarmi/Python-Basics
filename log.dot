@@ -1,0 +1,9 @@
+digraph G {
+	rankdir=LR
+	c1 [label="Commit 1" color=lightblue2 style=filled]
+	c2 [label="Commit 2" color=lightblue2 style=filled]
+	f1 [label="Feature 1" color=gold style=filled]
+	c1 -> c2
+	c2 -> f1
+}
+
