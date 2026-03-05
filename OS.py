@@ -47,3 +47,9 @@ child=path
 parent=os.path.realpath(os.path.join(child,'..'))
 print(f"The child path is {child}")
 print(f"The parent to the above child path is {parent}")
+
+prefix=''
+suffix="hello"
+print(os.path.join(prefix,suffix))
+print(os.path.join(suffix,prefix))
+print(os.path.join(prefix,prefix))
