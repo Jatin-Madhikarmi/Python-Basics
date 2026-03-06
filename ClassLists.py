@@ -12,6 +12,9 @@ def my_func():
 
 car=my_func()
 my_list=list()
-my_list.append(car.__dict__)
-print(len(my_list))
-print(my_list)
+my_list.append(car)
+first_entry_list=my_list[0]
+print(f"The list is {my_list}")
+print(f"The model is {first_entry_list.model}")
+print(f"The owner is {first_entry_list.owner}")
+print(f"The compnay is {first_entry_list.company}")
