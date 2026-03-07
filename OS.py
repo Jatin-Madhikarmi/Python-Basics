@@ -53,3 +53,16 @@ suffix="hello"
 print(os.path.join(prefix,suffix))
 print(os.path.join(suffix,prefix))
 print(os.path.join(prefix,prefix))
+
+#directory_path='C:/Users/jatin/Downloads'
+file_path='C:/Users/jatin/Downloads/config/hello.docx'
+file_path=os.path.realpath(file_path)
+
+print(f"The python is currently looking at the directory {os.getcwd()}")
+if os.path.exists(file_path): # To check whether the path exists or not 
+    if not os.path.isdir(file_path): # To check whether it is a directory path or a file path
+        print(f"Not a directory {file_path}")
+    elif os.listdir(file_path): # To check if the directory already exists or not 
+        print(f"The directory {file_path} is not empty")
+else:
+    print(f"No, the path {file_path} doesn't exists")
