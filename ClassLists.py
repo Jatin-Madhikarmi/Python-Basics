@@ -18,3 +18,7 @@ print(f"The list is {my_list}")
 print(f"The model is {first_entry_list.model}")
 print(f"The owner is {first_entry_list.owner}")
 print(f"The compnay is {first_entry_list.company}")
+
+number='10'
+print(f"The original nubmer is {number}")
+print(f"The number after applying zfill is {number.zfill(6)}")
