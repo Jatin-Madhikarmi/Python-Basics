@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 
 path="C:/Users/jatin/Downloads"
 newdir=["config"]
@@ -54,7 +55,6 @@ print(os.path.join(prefix,suffix))
 print(os.path.join(suffix,prefix))
 print(os.path.join(prefix,prefix))
 
-#directory_path='C:/Users/jatin/Downloads'
 file_path='C:/Users/jatin/Downloads/config/hello.docx'
 file_path=os.path.realpath(file_path)
 
@@ -66,3 +66,9 @@ if os.path.exists(file_path): # To check whether the path exists or not
         print(f"The directory {file_path} is not empty")
 else:
     print(f"No, the path {file_path} doesn't exists")
+
+directory_path='C:/Users/jatin/Downloads'
+print(directory_path)
+directory_path=os.path.realpath(directory_path)
+directory_file=Path(directory_path).name
+print(directory_file)
