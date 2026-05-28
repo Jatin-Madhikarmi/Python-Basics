@@ -31,3 +31,9 @@ g.node('f1', 'Feature 1', color='gold', style='filled')
 g.edges([('c1', 'c2'), ('c2', 'f1')])
 
 print(g.source) # This prints the DOT code you were writing manually!
+
+dot=Digraph("A Simple Graph")
+dot.node('A','Initial Commit',shape='rect',fillcolor='yellow',style='filled')
+dot.edge('A','B')
+dot.node('B','Implemened lists',shape='rect',fillcolor='lightblue',style='filled')
+print(dot)
