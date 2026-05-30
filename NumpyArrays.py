@@ -86,7 +86,14 @@ else:
     print("Both the array's are not equal.\n")
 
 
-arr1=np.arange(1,50,10)
+arr1=np.arange(1,50,10) 
+# Here the arange function is takes a start and stop with the interval, i.e we give the start value and the ending value and the interval
+# between those values that are to be generated. It is not necessary that the last element will be equal to the ending value that we provided
+# so it generates the array on the basis of the start,end and the interval which are to be provided i.e in this case we provided the 
+# interval value to be 10 so there is a spacing of 10 between the values generated.
 arr2=np.linspace(1,50,10)
+#* Here the linspace function takes the start value,end value and the total number of elements are to be in the array,i.e the start and 
+# ene values are exactly the same the third argument is the number of elements in our array. So this function's job is to generated exactly
+# the numbers of elements based on the third argument and the start and end values.*#
 print(f"The value of the array arr1 is {arr1}")
 print(f"The value of the array arr2 is {arr2}")
