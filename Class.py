@@ -98,13 +98,13 @@ class Employee():
         self.name=name
         self._id=id
         self._location=location
-        self.__department="Management"
+        self._department="Management"
 
     def get_department(self):
-        print(f"The department is {self.__department}")
+        print(f"The department is {self._department}")
 
-    def __set_department(self,department):
-        self.__department=department
+    def set_department(self,department):
+        self._department=department
 
 E1=Employee("John","001","Bamel")
 E1.get_department()
@@ -112,6 +112,23 @@ E1.set_department("CEO")
 E1.get_department()
 print(E1.name)
 print(E1._id)
-print(E1.__department)
+print(E1._department)
         
-    
+print("This is the latest piece of code")
+class Dog:
+    name:str
+
+    def __init__(self,name):
+        self.name=name
+    def __str__(self):
+        print("The __str__ function of the Dog class was called")
+        return(f"The name of the dog is {self.name}")
+
+dog=Dog("Rex")
+print(dog.name)
+print(dog)   
+# The statemenet print(dog) here the print() function needs a string to be displayed i.e when you write the print(42) internally
+# it calls str(42) and displays it onto the screen and when we pass the dog which is an instance of the Dog class we call str(dog)
+# and internally it calls the Dog.__str__() function we can also verify this by print statement which states that the __str__
+# function of the Dog class has been entered.
+
